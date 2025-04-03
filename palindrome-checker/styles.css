@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: #034858;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,7 +15,56 @@ body{
     width: auto;
     height: auto;
     padding: 30px;
-    background-color: blanchedalmond;
+    background-color: #33BFAF;
     border-radius: 20px;
 }
 
+.center h2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#result{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text-input{
+    width: 400px;
+    height: 30px;
+    margin: 4px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 3px solid #034858;
+    background-color: #33BFAF;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
+#text-input::placeholder{
+    color: whitesmoke;
+}
+
+#text-input:focus{
+    outline: none !important;
+    color: antiquewhite;
+}
+
+#check-btn{
+    width: auto;
+    height: auto;
+    background-color: #034858;
+    color: whitesmoke;
+    padding: 6px 8px;
+    margin: 2px;
+    border-radius: 18px;
+    cursor: pointer;
+    
+}
