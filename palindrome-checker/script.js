@@ -10,23 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (isPalindrome(inputValue)) {
-            resultElement.textContent = `${inputValue} is a palindrome.`;
+            resultElement.textContent = `'${inputValue}' is a palindrome.`;
         } else {
-            resultElement.textContent = `${inputValue} is not a palindrome.`;
+            resultElement.textContent = `'${inputValue}' is not a palindrome.`;
         }
-
-      // Click event listener for the button
-      checkButton.addEventListener("click", checkPalindrome);
-
-      // 'Enter' key event listener using 'keypress' & charCode 13
-      inputElement.addEventListener("keypress", function (event) {
-          if (event.charCode === 13) {
-              checkButton.click(); // Simulates a button click
-          }
-      });
+});
 
     });
-});
 
 // Function to check if a string is a palindrome
 function isPalindrome(str) {
