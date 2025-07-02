@@ -30,6 +30,8 @@ function toRoman(inputNum) {
     const button = document.getElementById("convert-btn");
     const input = document.getElementById("number");
     const output = document.getElementById("output");
+    const spartaBanner = document.getElementById("sparta-banner");
+
   
     function handleConversion() {
       const numberInput = input.value;
@@ -37,20 +39,30 @@ function toRoman(inputNum) {
   
       if (numberInput === "" || isNaN(num)) {
         output.textContent = "Please enter a valid number";
-      } else if (num < 1) {
+        spartaBanner.textContent = "";
+        return;
+      }
+      if (num < 1) {
         output.textContent = "Please enter a number greater than or equal to 1";
+        spartaBanner.textContent = "";
       } else if (num >= 4000) {
         output.textContent = "Please enter a number less than or equal to 3999";
-      } else {
-        output.textContent = toRoman(num);
-
+        spartaBanner.textContent = "";
+      } else if (num === 300){
         //wee little easter egg hehe
-        if(num === 300){
+
+            output.textContent = toRoman(num);
             const audio = new Audio("thisissparta.mp3");
             audio.play().catch((err) => {
                 console.warn("SPARTA could not play", err);
             });
-        }
+
+            spartaBanner.textContent = "THIS. IS. SPARTAAA!!!";
+            spartaBanner.classList.add("show");
+
+      }else {
+        output.textContent = toRoman(num);
+        spartaBanner.textContent = "";
       }
     }
   

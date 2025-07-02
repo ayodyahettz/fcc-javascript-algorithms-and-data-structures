@@ -1,0 +1,80 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    text-align: center;
+    padding-top: 80px;
+    margin: 0;
+  }
+
+  #title{
+    font-size: 40px;
+  }
+
+  #input-fields{
+    flex-direction: row;
+  }
+
+  input{ 
+    width: 50%;
+    
+  }
+
+  input:focus{
+    outline: none;
+  }
+  
+  input::placeholder{
+    text-align: center;
+  }
+
+  input, button {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #ff3c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #output {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #fff;
+  }
+  
+  #sparta-banner {
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+    margin-top: 30px;
+    transition: opacity 0.4s ease;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 999;
+  }
+  
+  #sparta-banner.show {
+    visibility: visible;
+    opacity: 1;
+    animation: shake 0.5s infinite, flash 1s ease-in-out infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    25% { transform: translate(-1px, -2px) rotate(-1deg); }
+    50% { transform: translate(-3px, 0px) rotate(1deg); }
+    75% { transform: translate(3px, 1px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(1deg); }
+  }
+  
+  @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  
