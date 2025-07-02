@@ -43,13 +43,19 @@ function toRoman(inputNum) {
         output.textContent = "Please enter a number less than or equal to 3999";
       } else {
         output.textContent = toRoman(num);
+
+        //wee little easter egg hehe
+        if(num === 300){
+            const audio = new Audio("thisissparta.mp3");
+            audio.play().catch((err) => {
+                console.warn("SPARTA could not play", err);
+            });
+        }
       }
     }
   
-    // Click event
     button.addEventListener("click", handleConversion);
   
-    // Enter key support
     input.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
         handleConversion();
