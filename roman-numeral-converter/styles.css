@@ -65,16 +65,54 @@ body {
     animation: shake 0.5s infinite, flash 1s ease-in-out infinite;
   }
   
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    25% { transform: translate(-1px, -2px) rotate(-1deg); }
-    50% { transform: translate(-3px, 0px) rotate(1deg); }
-    75% { transform: translate(3px, 1px) rotate(0deg); }
-    100% { transform: translate(1px, -1px) rotate(1deg); }
-  }
   
-  @keyframes flash {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+
+#noice-banner {
+    font-size: 3rem;
+    font-weight: 400;
+    color: whitesmoke;
+    margin-top: 30px;
+    transition: opacity 0.4s ease;
+    text-transform: none;
+    position: relative;
+    z-index: 999;
+}
+
+#noice-banner.show{
+  visibility: visible;
+  opacity: 1;
+  animation: fadeInOut 3s forwards;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  25% { transform: translate(-1px, -2px) rotate(-1deg); }
+  50% { transform: translate(-3px, 0px) rotate(1deg); }
+  75% { transform: translate(3px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(1deg); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes fadeInOut{
+  0%{
+    opacity: 1;
+    transform: translateY(-20px);
   }
-  
+  10%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

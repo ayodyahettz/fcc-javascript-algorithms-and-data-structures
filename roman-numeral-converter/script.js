@@ -31,6 +31,7 @@ function toRoman(inputNum) {
     const input = document.getElementById("number");
     const output = document.getElementById("output");
     const spartaBanner = document.getElementById("sparta-banner");
+    const noiceBanner = this.document.getElementById("noice-banner")
 
   
     function handleConversion() {
@@ -50,17 +51,25 @@ function toRoman(inputNum) {
         spartaBanner.textContent = "";
       } else if (num === 300){
         //wee little easter egg hehe
-
             output.textContent = toRoman(num);
             const audio = new Audio("thisissparta.mp3");
             audio.play().catch((err) => {
                 console.warn("SPARTA could not play", err);
             });
 
-            spartaBanner.textContent = "THIS. IS. SPARTAAA!!!";
-            spartaBanner.classList.add("show");
+            noiceBanner.textContent = "THIS. IS. SPARTAAA!!!";
+            noiceBanner.classList.add("show");
 
-      }else {
+      }else if (num === 69){
+        output.textContent = toRoman(num);
+        const audio = new Audio("");
+        audio.play().catch((err) => {
+          console.warn("NICE could not play", err)
+        });
+            noiceBanner.textContent = "Noice";
+            noiceBanner.classList.add("show");
+
+      } else {
         output.textContent = toRoman(num);
         spartaBanner.textContent = "";
       }
@@ -74,4 +83,22 @@ function toRoman(inputNum) {
       }
     });
   });
+  
+  // other numbers:
+  // 69 - nice 
+  // execute order 66
+  // 420
+  // 911
+  // 666
+  // 1337
+  // 404
+  //3.14
+  // 80085
+  // 1984 - jojowell
+  //007 james bond
+  // 1138 - thx 1138
+  // 88 - ss and back to the future meme
+  // 2319 - monsters inc
+  // 2020 - the plague
+  // 51 - area 51
   
