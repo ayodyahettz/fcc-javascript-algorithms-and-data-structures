@@ -31,7 +31,9 @@ function toRoman(inputNum) {
     const input = document.getElementById("number");
     const output = document.getElementById("output");
     const spartaBanner = document.getElementById("sparta-banner");
-    const noiceBanner = this.document.getElementById("noice-banner")
+    const noiceBanner = this.document.getElementById("noice-banner");
+    const eastereggnotfoundBanner = this.document.getElementById("eastereggnotfound-banner");
+    const order66 = this.document.getElementById("order66-banner");
 
   
     function handleConversion() {
@@ -64,12 +66,29 @@ function toRoman(inputNum) {
         output.textContent = toRoman(num);
         const audio = new Audio("");
         audio.play().catch((err) => {
-          console.warn("NICE could not play", err)
+          console.warn("NICE could not play", err);
         });
             noiceBanner.textContent = "Noice";
             noiceBanner.classList.add("show");
 
-      } else {
+      } else if (num === 404){
+        output.textContent = toRoman(num);
+        const audio = new Audio("");
+        audio.play().catch((err) => {
+          console.warn("NICE could not play", err);
+        });
+            eastereggnotfoundBanner.textContent = "Easter egg not found";
+            eastereggnotfoundBanner.classList.add("show"); 
+      
+      }else if(num == 66){
+        output.textContent = toRoman(num);
+        const audio = new Audio("");
+        audio.play().catch((err) => {
+          console.warn("Order 66 failed to execute", err);
+        });
+        order66.textContent = "Execute order 66.";
+        order66.classList.add("show");
+      }else {
         output.textContent = toRoman(num);
         spartaBanner.textContent = "";
       }
@@ -85,7 +104,6 @@ function toRoman(inputNum) {
   });
   
   // other numbers:
-  // 69 - nice 
   // execute order 66
   // 420
   // 911
@@ -101,4 +119,11 @@ function toRoman(inputNum) {
   // 2319 - monsters inc
   // 2020 - the plague
   // 51 - area 51
+  
+
+  // completed
+  // 404
+  // 69
+  // 300
+  // 66
   
